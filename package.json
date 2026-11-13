@@ -1,0 +1,40 @@
+{
+  "name": "flying-flea-sfmc-doi-integration",
+  "version": "1.0.0",
+  "description": "HMAC-authenticated login API (POST /api/optIn/Auth)",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "hash-password": "tsx src/auth/hashPassword.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "sfmc",
+    "hmac",
+    "auth"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.1128.0",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.10.5",
+    "eslint": "^10.10.0",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.23.1",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.70.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.8"
+  }
+}
